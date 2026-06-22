@@ -1,0 +1,17 @@
+ALTER TABLE species
+    DROP COLUMN IF EXISTS data,
+    ADD COLUMN image_urls       JSONB NOT NULL DEFAULT '[]',
+    ADD COLUMN taxonomy         JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN names            JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN description      JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN morphology       JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN ecology          JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN phenology        JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN reproduction     JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN distribution     JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN uses             JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN conservation     JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN specimen_data    JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN ethnobotany      JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN media_summary    JSONB NOT NULL DEFAULT '{}',
+    ADD COLUMN metadata         JSONB NOT NULL DEFAULT '{}';

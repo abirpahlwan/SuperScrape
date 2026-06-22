@@ -1,0 +1,28 @@
+{
+  "name": "superscrape",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3.85.1",
+    "@payloadcms/next": "^3.85.1",
+    "@payloadcms/richtext-lexical": "^3.85.1",
+    "cross-env": "^10.1.0",
+    "next": "^16.2.9",
+    "payload": "^3.85.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "sharp": "^0.35.2"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3"
+  }
+}

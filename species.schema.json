@@ -1,0 +1,146 @@
+{
+  "type": "object",
+  "properties": {
+    "image_urls":          { "type": "array", "items": { "type": "string" } },
+    "taxonomy": {
+      "kingdom": null,
+      "subkingdom": null,
+      "division": null,
+      "subdivision": null,
+      "class": null,
+      "subclass": null,
+      "order": null,
+      "suborder": null,
+      "family": null,
+      "subfamily": null,
+      "tribe": null,
+      "genus": null,
+      "subgenus": null,
+      "species": null,
+      "subspecies": null,
+      "variety": null,
+      "cultivar": null
+    },
+    "names": {
+      "scientific_name": null,
+      "scientific_author": null,
+      "common_names": [
+        {
+          "name": null,
+          "language": null
+        }
+      ],
+      "local_names": [
+        {
+          "name": null,
+          "language": null
+        }
+      ],
+      "synonyms": [],
+      "abbreviations": []
+    },
+    "description": {
+      "short_description": null,
+      "full_description": null,
+      "life_cycle": null,
+      "growth_form": null,
+      "origin": null
+    },
+    "morphology": {
+      "habit": null,
+      "root": null,
+      "stem": null,
+      "bark": null,
+      "branch": null,
+      "leaf": null,
+      "stipule": null,
+      "petiole": null,
+      "inflorescence": null,
+      "flower": null,
+      "perianth": null,
+      "calyx": null,
+      "corolla": null,
+      "androecium": null,
+      "gynoecium": null,
+      "fruit": null,
+      "seed": null,
+      "chromosome_number": null
+    },
+    "ecology": {
+      "habitat": null,
+      "ecosystem": null,
+      "soil_type": null,
+      "soil_ph": null,
+      "soil_moisture": null,
+      "humidity": null,
+      "temperature_range": null,
+      "sunlight": null,
+      "altitude": null,
+      "rainfall": null,
+      "native_range": [],
+      "introduced_range": [],
+      "countries": [],
+      "regions": [],
+      "coordinates": [],
+      "endemism": null
+    },
+    "phenology": {
+      "flowering_period": null,
+      "fruiting_period": null,
+      "seed_maturation": null,
+      "dormancy_period": null
+    },
+    "reproduction": {
+      "propagation_methods": [],
+      "pollination": null,
+      "seed_dispersal": null,
+      "vegetative_reproduction": null
+    },
+    "economic_importance": {
+      "ornamental": [],
+      "medicinal": [],
+      "food": [],
+      "fodder": [],
+      "timber": [],
+      "fiber": [],
+      "fuel": [],
+      "industrial": [],
+      "cultural": [],
+      "conservation_status": null,
+      "protected": false,
+      "threats": [],
+      "toxicity": null,
+      "legal_status": null,
+      "notes": null,
+      "traditional_uses": [],
+      "folk_names": [],
+      "cultural_significance": null,
+      "other": []
+    },
+    "specimen_data": {
+      "collector": null,
+      "collection_date": null,
+      "collection_location": null,
+      "accession_number": null,
+      "herbarium_code": null
+    },
+    "media_summary": {
+      "image_count": 0,
+      "flower_images": 0,
+      "leaf_images": 0,
+      "fruit_images": 0,
+      "illustration_count": 0
+    },
+    "metadata": {
+      "summary": null,
+      "categories": [],
+      "keywords": [],
+      "tags": [],
+      "embedding_id": null,
+      "verified": false,
+      "confidence_score": null,
+      "last_enrichment_pass": 0
+    }
+  },
+  "required": ["names"]
+}
