@@ -1,11 +1,48 @@
 import type { CollectionConfig } from 'payload'
 
+function extractCommonName(data: Record<string, unknown>): string {
+  const names = data?.names as Record<string, unknown> | undefined
+  const commonNames = names?.common_names as { name?: string }[] | undefined
+  return commonNames?.[0]?.name || (names?.scientific_name as string) || ''
+}
+
 export const Species: CollectionConfig = {
   slug: 'species',
   admin: {
-    useAsTitle: 'id',
+    useAsTitle: 'species_name',
   },
   fields: [
+    {
+      name: 'species_name',
+      type: 'text',
+      admin: { hidden: true },
+      hooks: {
+        beforeChange: [
+          ({ data }) => {
+            if (data) {
+              return extractCommonName(data)
+            }
+          },
+        ],
+      },
+    },
+    {
+      name: 'source_url',
+      type: 'text',
+      required: true,
+      unique: true,
+      index: true,
+      admin: {
+        readOnly: true,
+      },
+    },
+    {
+      name: 'raw_markdown',
+      type: 'textarea',
+      admin: {
+        readOnly: true,
+      },
+    },
     { name: 'image_urls', type: 'json' },
     { name: 'taxonomy', type: 'json' },
     { name: 'names', type: 'json' },
