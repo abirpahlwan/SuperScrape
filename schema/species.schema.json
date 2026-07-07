@@ -1,7 +1,12 @@
 {
   "type": "object",
   "properties": {
-    "image_urls":          { "type": "array", "items": { "type": "string" } },
+    "image_urls": { 
+      "type": "array", 
+      "items": { 
+        "type": "string"
+        }
+      },
     "taxonomy": {
       "kingdom": null,
       "subkingdom": null,
